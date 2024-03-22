@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ingenieria1202410;
+package Figuras;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author lmpl6
  */
-public class DibujoLibre {
+public class DibujoLibre extends Figura{
 
     ArrayList<Point> puntos = new ArrayList<>();
 
@@ -21,6 +21,7 @@ public class DibujoLibre {
         puntos.add(puntoInicial);
     }
 
+    @Override
     public void dibujar(Graphics g) {
         g.setColor(Color.RED);
         if (puntos.size() == 1) {
@@ -32,6 +33,7 @@ public class DibujoLibre {
         }
     }
 
+    @Override
     public void actualizar(Point puntoFinal) {
         puntos.add(puntoFinal);
     }

@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ingenieria1202410;
+package Figuras;
 
+import Figuras.Figura;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
@@ -12,7 +13,7 @@ import java.awt.Point;
  *
  * @author josearielpereyra
  */
-public class Linea {
+public class Linea  extends Figura{
 
     private Point puntoInicial;
     private Point puntoFinal;
@@ -25,14 +26,14 @@ public class Linea {
         this.puntoInicial = puntoInicial;
         this.puntoFinal = puntoFinal;
     }
-
+    @Override
     public void dibujar(Graphics g) {
         g.setColor(Color.RED);
         if (puntoInicial != puntoFinal) {
             g.drawLine(puntoInicial.x, puntoInicial.y, puntoFinal.x, puntoFinal.y);
         }
     }
-
+ @Override
     public void actualizar(Point puntoFinal) {
         this.puntoFinal = puntoFinal;
     }

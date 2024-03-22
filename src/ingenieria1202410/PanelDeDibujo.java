@@ -4,12 +4,17 @@
  */
 package ingenieria1202410;
 
+
+import Figuras.DibujoLibre;
+import Figuras.Linea;
+import Figuras.Rectangulo;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import javax.swing.JPanel;
+
 
 /**
  *
